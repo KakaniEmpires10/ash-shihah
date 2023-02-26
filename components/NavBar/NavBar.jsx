@@ -12,7 +12,7 @@ const cormorant_garamond = Cormorant_Garamond({
 export default function NavBar() {
   return (
     <>
-      <div className="relative bg-gradient-to-br from-primary-dark-200 via-primary-dark-50 to-primary-dark-150 top-0 w-full shadow-sm shadow-cyan-900 px-5 py-2">
+      <div className="relative bg-black top-0 w-full shadow-sm shadow-cyan-900 px-5 py-2">
         <div className="flex justify-between items-center">
           <Link className="cursor-pointer" href="/">
             <Image

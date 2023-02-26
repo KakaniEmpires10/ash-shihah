@@ -1,5 +1,6 @@
 import { Tanggal } from "components/DateTime";
 import Layout from "components/layout/Layout";
+import Title from "components/title";
 import Head from "next/head";
 
 export default function Event() {
@@ -8,6 +9,7 @@ export default function Event() {
       <Head>
         <title>Event Reminder</title>
       </Head>
+      <Title title="Event" />
       <div className="space-y-4">
         <div className="bg-white shadow-sm shadow-slate-500 rounded-xl p-8">
           <div>

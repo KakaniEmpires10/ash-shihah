@@ -7,6 +7,7 @@ import { CardProfile } from "components/SideBar/profile";
 import SocialIcon from "components/SocialIcon";
 import { Libre_Baskerville } from "@next/font/google";
 import { GiSupersonicArrow } from "react-icons/gi";
+import LogoSlider from "components/Slider/logoSlider";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -24,24 +25,26 @@ export default function Home() {
         {/* ------------------------------------------- Header Section ----------------------------------------- */}
         <div
           id={styles.header}
-          className={`${libreBaskerville.className} relative h-[120vh]`}
+          className={`${libreBaskerville.className} relative h-screen`}
         >
           <div className="grid grid-cols-2 gap-10 text-white px-14 py-16">
-            <div className="text-xl leading-loose">
-              <h1 className="text-[72px] font-bold">LDF Ash-Shihah</h1>
-              <h4 className="text-xl">(Ukhuwahnya tu disini 😍)</h4>
-              <h3 className="text-[45px]">Fakultas Keperwatan USK</h3>
-              <p className="leading-snug text-lg">
-                Kami adalah organisasi fakultas yang senantiasa aktif dalam
-                berdakwah dan mengajak saudara/i sekalian kejalan syurga yang
-                diridhoi Allah SWT
-              </p>
-              <p className="mt-2">ikuti kami di social media</p>
-              <div className="flex gap-6 text-[40px] mt-5">
-                <SocialIcon />
+            <div className="flex justify-center items-center">
+              <div className="text-xl space-y-5">
+                <h1 className="text-7xl font-bold">LDF Ash-Shihah</h1>
+                <h4 className="text-xl">(Ukhuwahnya tu disini 😍)</h4>
+                <h3 className="text-5xl">Fakultas Keperwatan USK</h3>
+                <p className="leading-snug text-lg">
+                  Kami adalah organisasi fakultas yang senantiasa aktif dalam
+                  berdakwah dan mengajak saudara/i sekalian kejalan syurga yang
+                  diridhoi Allah SWT
+                </p>
+                <p className="mt-2">ikuti kami di social media</p>
+                <div className="flex gap-6 text-4xl mt-5">
+                  <SocialIcon />
+                </div>
               </div>
+              <div></div>
             </div>
-            <div></div>
           </div>
           <Image
             priority
@@ -68,7 +71,7 @@ export default function Home() {
         <div className="grid grid-cols-5 gap-8 bg-gradient-to-b from-primary-white-500 via-primary-white-350 p-16">
           <div className="col-span-3">
             <div className="flex flex-col space-y-6 justify-center">
-              <h3 className="font-bold text-[50px] drop-shadow-xl">About</h3>
+              <h3 className="font-bold text-5xl drop-shadow-xl">About</h3>
               <hr className="border-black border-2 shadow w-1/3" />
               <blockquote>
                 <p className="text-lg">
@@ -99,18 +102,10 @@ export default function Home() {
 
         <div id={styles.department}>
           <div>
-            <h3 className="text-[40px] font-bold">Departemen Kami</h3>
+            <h3 className="text-4xl font-bold">Departemen Kami</h3>
             <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/2 m-auto" />
           </div>
-          <div>
-            <Image
-              src="/logo-DANUS.png"
-              alt="departemen"
-              width={232}
-              height={282}
-            />
-            <p className="font-bold text-2xl text-center mt-4">Dept Danus</p>
-          </div>
+          <LogoSlider />
         </div>
 
         {/* ------------------------------------------ Unggulan Section ----------------------------------------- */}
@@ -126,16 +121,16 @@ export default function Home() {
             fill
             className="object-cover object-bottom"
           />
-          <div className="py-40 text-center text-white bg-gradient-radial from-primary-white-700 to-primary-white-250 leading-loose">
-            <h3 className="text-[40px]">Penasaran tentang kami ?</h3>
+          <div className="py-40 text-center text-white bg-gradient-radial from-primary-white-700 to-primary-white-250 space-y-6">
+            <h3 className="text-5xl">Penasaran tentang kami ?</h3>
             <h5 className="text-3xl">Kunjungi kami di</h5>
             <p>
               Sekretariat LDF Ash-Shihah, Fakultas Keperawatan, Universitas
               Syiah Kuala
             </p>
             <div className="mt-7">
-              <h5 className="text-[38px]">See You All Soon</h5>
-              <div className="flex gap-6 justify-center text-[36px] mt-5">
+              <h5 className="text-4xl">See You All Soon</h5>
+              <div className="flex gap-6 justify-center text-4xl mt-5">
                 <SocialIcon />
               </div>
             </div>
