@@ -2,13 +2,33 @@
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(/img/shihah/LDF-2022.png);
     background-size: cover;
     background-position: bottom;
+    padding: 12% 7%;
 }
 
 #department {
-    background: linear-gradient(to bottom, transparent, #fff, transparent);
-    padding: 120px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background: linear-gradient(to bottom, transparent, #fff);
+    padding: 10% 0;
+}
+
+#blogProfile {
+    background-color: transparent;
+    margin: 5% 5%;
+    position: relative;
+}
+
+#unggulan {
+    background-color: #fff;
+    padding: 5% 1%;
+    position: relative;
+}
+
+#memori {
+    padding: 5% 0;
+    position: relative;
+}
+
+#testimonial {
+    background: linear-gradient(to bottom right, #00bdfe, #35ceff, #5adeff), url(/kegiatan_4.png);
+    padding: 5% 0;
+    position: relative;
 }

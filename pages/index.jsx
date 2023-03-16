@@ -8,6 +8,10 @@ import SocialIcon from "components/SocialIcon";
 import { Libre_Baskerville } from "@next/font/google";
 import { GiSupersonicArrow } from "react-icons/gi";
 import LogoSlider from "components/Slider/logoSlider";
+import UnggulanSlider from "components/Slider/unggulanSlider";
+import TestimoniSlider from "components/Slider/testimoniSlider";
+import GallerySlider from "components/Slider/gallerySlider";
+import Carousel from "nuka-carousel/lib/carousel";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -25,21 +29,23 @@ export default function Home() {
         {/* ------------------------------------------- Header Section ----------------------------------------- */}
         <div
           id={styles.header}
-          className={`${libreBaskerville.className} relative h-screen`}
+          className={`${libreBaskerville.className} relative h-[120vh]`}
         >
-          <div className="grid grid-cols-2 gap-10 text-white px-14 py-16">
+          <div className="grid grid-cols-2 gap-8 text-white">
             <div className="flex justify-center items-center">
               <div className="text-xl space-y-5">
                 <h1 className="text-7xl font-bold">LDF Ash-Shihah</h1>
                 <h4 className="text-xl">(Ukhuwahnya tu disini 😍)</h4>
-                <h3 className="text-5xl">Fakultas Keperwatan USK</h3>
-                <p className="leading-snug text-lg">
+                <h3 className="text-5xl leading-normal">
+                  Fakultas Keperwatan USK
+                </h3>
+                <p className="leading-normal text-lg">
                   Kami adalah organisasi fakultas yang senantiasa aktif dalam
                   berdakwah dan mengajak saudara/i sekalian kejalan syurga yang
                   diridhoi Allah SWT
                 </p>
                 <p className="mt-2">ikuti kami di social media</p>
-                <div className="flex gap-6 text-4xl mt-5">
+                <div className="flex gap-2 text-4xl mt-5 z-10 relative">
                   <SocialIcon />
                 </div>
               </div>
@@ -54,17 +60,6 @@ export default function Home() {
             className="object-cover object-bottom"
           />
         </div>
-
-        {/* ----------------------------------------- Profile Box --------------------------------------------- */}
-        {/* <div className="bg-white shadow-sm shadow-gray-800 p-6 absolute my-5 rounded-xl">
-          <div className="">
-            <div className="flex gap-12 justify-center text-black text-center">
-              <CardProfile name="Seseorang" departmen="Gol 1" />
-              <CardProfile name="Seseorang" departmen="Gol 2" />
-              <CardProfile name="Seseorang" departmen="Gol 3" />
-            </div>
-          </div>
-        </div> */}
 
         {/* --------------------------------------------- About --------------------------------------------------*/}
 
@@ -98,19 +93,71 @@ export default function Home() {
           </div>
         </div>
 
+        {/* ----------------------------------------- Suhu Profile --------------------------------------------- */}
+        <div id={styles.blogProfile}>
+          <h3 className="text-4xl font-bold text-center">
+            Suhu Tahun {new Date().getFullYear()}
+          </h3>
+          <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
+          <div className="flex justify-center text-black">
+            <Carousel
+              slidesToShow={3}
+              animation="zoom"
+              zoomScale={0.9}
+              cellAlign="center"
+              withoutControls
+              slideIndex={1}
+              dragging={false}
+              swiping={false}
+            >
+              <CardProfile name="Fara Khairunnisa" departmen="Bendahara Umum" />
+              <CardProfile name="Hendra" departmen="Ketua Umum" />
+              <CardProfile
+                name="Luthfiya Az-Zuhra"
+                departmen="Sekretaris Umum"
+              />
+            </Carousel>
+          </div>
+        </div>
+
+        {/* ----------------------------------------- Pengurus Section ------------------------------------------ */}
+
+        <div>
+          <h3 className="text-4xl font-bold text-center">Pengurus {new Date().getFullYear()}</h3>
+          <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
+        </div>
+
         {/* ----------------------------------------- Departemen Slider ----------------------------------------- */}
 
         <div id={styles.department}>
-          <div>
+          <div className="flex flex-col justify-center items-center">
             <h3 className="text-4xl font-bold">Departemen Kami</h3>
-            <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/2 m-auto" />
+            <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
           </div>
           <LogoSlider />
         </div>
 
         {/* ------------------------------------------ Unggulan Section ----------------------------------------- */}
+        <div id={styles.unggulan}>
+          <h3 className="text-4xl font-bold text-center">Unggulan Kami</h3>
+          <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
+          <UnggulanSlider />
+        </div>
+
+        {/* ----------------------------------------- Memori Bree 😥 ---------------------------------------------*/}
+        <div id={styles.memori}>
+          <h3 className="text-4xl font-bold text-center">
+            Memori Pengurus {new Date().getFullYear() - 1}
+          </h3>
+          <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
+        </div>
 
         {/* ---------------------------------------- Testimonial Section ---------------------------------------- */}
+        <div id={styles.testimonial}>
+          <h3 className="text-4xl font-bold text-center">Testimonial</h3>
+          <hr className="mt-7 mb-5 border-2 border-black rounded-xl w-1/12 m-auto" />
+          <TestimoniSlider />
+        </div>
 
         {/* ------------------------------------------- Footer Section ------------------------------------------ */}
         <footer className="relative">
@@ -121,22 +168,24 @@ export default function Home() {
             fill
             className="object-cover object-bottom"
           />
-          <div className="py-40 text-center text-white bg-gradient-radial from-primary-white-700 to-primary-white-250 space-y-6">
-            <h3 className="text-5xl">Penasaran tentang kami ?</h3>
-            <h5 className="text-3xl">Kunjungi kami di</h5>
-            <p>
+          <div className="pt-36 pb-48 text-center text-white bg-gradient-radial from-primary-white-700 to-primary-white-250 space-y-6">
+            <h3 className="text-5xl drop-shadow-md">
+              Penasaran tentang kami ?
+            </h3>
+            <h5 className="text-3xl drop-shadow-md">Kunjungi kami di</h5>
+            <p className="drop-shadow-md">
               Sekretariat LDF Ash-Shihah, Fakultas Keperawatan, Universitas
               Syiah Kuala
             </p>
             <div className="mt-7">
-              <h5 className="text-4xl">See You All Soon</h5>
-              <div className="flex gap-6 justify-center text-4xl mt-5">
+              <h5 className="text-4xl drop-shadow-md">See You All Soon</h5>
+              <div className="flex gap-2 justify-center text-4xl mt-5">
                 <SocialIcon />
               </div>
             </div>
           </div>
           <div className="text-center text-white py-4">
-            <p className="drop-shadow-sm">
+            <p className="drop-shadow-md">
               Copyright &copy; {new Date().getFullYear()} Muhammad Alim Kakani |
               Freelance for Money and Happyness
             </p>

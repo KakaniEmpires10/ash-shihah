@@ -1,7 +1,6 @@
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { DateTime } from "../DateTime";
 import { SideProfile, TopProfile } from "./profile";
-import { BiTimeFive } from "react-icons/bi";
 import { IoHome } from "react-icons/io5";
 import Link from "next/link";
 import SideList from "./SideList";
@@ -22,7 +21,7 @@ export default function SideBar(props) {
             <IoHome />
           </Link>
           <div
-            className="w-10 h-10 sm:hidden hover:bg-white hover:shadow-sm hover:shadow-slate-800 hover:rounded-xl text-white hover:text-blue-700 text-2xl flex justify-center items-center duration-300"
+            className="w-10 h-10 sm:hidden font-bold hover:bg-white hover:shadow-sm hover:shadow-slate-800 hover:rounded-xl text-white hover:text-blue-700 text-2xl flex justify-center items-center duration-300"
             onClick={handleClick}
           >
             <BsChevronDoubleLeft />

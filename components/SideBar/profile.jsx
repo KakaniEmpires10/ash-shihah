@@ -46,21 +46,33 @@ function TopProfile(props) {
 
 function CardProfile(props) {
   return (
-    <div className="shadow-sm shadow-slate-400 bg-gradient-to-br from-sky-400 via-sky-100 to-sky-300 p-7 rounded-b-3xl">
+    <div
+      className="shadow-sm shadow-slate-400 px-10 py-16 rounded-3xl flex items-center flex-col"
+      style={{ backgroundColor: "rgba(255, 255, 255, 0.2 )" }}
+    >
       <Image
-        className="rounded-full border-4 border-sky-500 shadow-sm shadow-sky-300 relative left-4"
-        src={"/profile.png"}
-        width={60}
-        height={60}
+        className="mb-5"
+        src={"/img/Shape/ring_2/ringBlue.png"}
+        width={130}
+        height={130}
         alt="profile"
       />
-      <div className="text-center text-lg">
+      <div className="text-lg text-center">
         <p>
           <strong>{props.name}</strong>
         </p>
         <small>
           <em>{props.departmen}</em>
         </small>
+        <div className="mt-4">
+          <p>
+            <em>
+              &quot;Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Harum excepturi quo obcaecati voluptatum maxime quos quae,
+              molestias eos et commodi&quot;
+            </em>
+          </p>
+        </div>
       </div>
     </div>
   );

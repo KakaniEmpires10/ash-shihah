@@ -1,6 +1,6 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import style from "../styles/loading.module.css";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Loading() {
   const router = useRouter();
@@ -9,7 +9,10 @@ export default function Loading() {
   useEffect(() => {
     const handleStart = (url) => url !== router.asPath && setIsLoading(true);
     const handleComplete = (url) =>
-      url === router.asPath && setIsLoading(false);
+      url === router.asPath &&
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
 
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
@@ -24,26 +27,19 @@ export default function Loading() {
 
   return (
     isLoading && (
-        <div id={style.body}>
-      <div className={style.loadingSpinner}>
-        <div className={style.loadingAnimation}>
-          <div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
+      <div id={style.body}>
+        <div className={style.container}>
+          <div className={style.ring}></div>
+          <div className={style.ring}></div>
+          <div className={style.ring}></div>
+          <p className="text-white dark:text-black">
+            Loading
+            <span className={style.dots}>.</span>
+            <span className={style.dots}>.</span>
+            <span className={style.dots}>.</span>
+          </p>
         </div>
       </div>
-        </div>
     )
   );
 }
