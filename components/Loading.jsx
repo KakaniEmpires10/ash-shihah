@@ -32,7 +32,7 @@ export default function Loading() {
           <div className={style.ring}></div>
           <div className={style.ring}></div>
           <div className={style.ring}></div>
-          <p className="text-white dark:text-black">
+          <p className="text-white">
             Loading
             <span className={style.dots}>.</span>
             <span className={style.dots}>.</span>

@@ -25,8 +25,8 @@ export default function Login() {
           alt="background"
         />
         <div className="relative z-10 flex flex-col justify-center items-center min-h-screen">
-          <div className="flex flex-col items-center py-16 px-14 bg-black/70 shadow-lg shadow-white rounded-3xl space-y-5">
-            <div className="text-white text-center space-y-5">
+          <div className="flex flex-col items-center py-16 px-14 bg-white/90 shadow-lg shadow-black rounded-3xl space-y-5">
+            <div className="text-black text-center space-y-5">
               <h3 className="text-5xl font-bold">Login</h3>
               <p className="text-base capitalize">
                 silahkan login dulu bree &#127773;
@@ -37,12 +37,12 @@ export default function Login() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block mb-2 uppercase tracking-wide font-bold text-xs text-white"
+                    className="block mb-2 uppercase tracking-wide font-bold text-xs text-black"
                   >
                     email
                   </label>
                   <input
-                    className="w-full text-white bg-transparent border-b-2 border-white rounded-b-2xl"
+                    className="w-full text-black bg-transparent border-b-2 border-black rounded-b-2xl"
                     type="email"
                     name="email"
                     id="email"
@@ -51,18 +51,18 @@ export default function Login() {
                 <div>
                   <label
                     htmlFor="password"
-                    className="block mb-2 uppercase tracking-wide font-bold text-xs text-white"
+                    className="block mb-2 uppercase tracking-wide font-bold text-xs text-black"
                   >
                     password
                   </label>
                   <input
-                    className="w-full text-white bg-transparent border-b-2 border-white rounded-b-2xl"
+                    className="w-full text-black bg-transparent border-b-2 border-black rounded-b-2xl"
                     type="password"
                     name="password"
                     id="password"
                   />
                 </div>
-                <small className="block font-semibold capitalize text-white">
+                <small className="block font-semibold capitalize text-black">
                   belum punya akun? Mari Daftar disini{" "}
                   <span className="text-red-600 hover:underline duration-200 font-bold">
                     <Link href="/register">Register !</Link>
@@ -70,13 +70,13 @@ export default function Login() {
                 </small>
                 <div className="flex justify-between items-center font-bold">
                   <button
-                    className="px-7 py-2 text-lg bg-primary-white-700 rounded-full hover:bg-primary-dark-350 text-white duration-300"
+                    className="px-7 py-2 border border-black/40 text-lg bg-primary-white-700 rounded-full hover:bg-primary-dark-350 text-white duration-300"
                     type="submit"
                   >
                     Login
                   </button>
                   <Link
-                    className="text-primary-white-700 hover:text-primary-white-50 duration-300"
+                    className="text-primary-white-700 hover:text-primary-dark-150 hover:drop-shadow-md duration-300"
                     href="/"
                   >
                     Forgot Password ?

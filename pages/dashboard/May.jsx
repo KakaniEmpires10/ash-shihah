@@ -7,12 +7,18 @@ import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
 export default function May() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <Layout dashboard>
       <Head>
         <title>Muttaba&apos;ah Yaumiyyah</title>
       </Head>
       <Title title="MAY" />
+
+      {/* ---------------------------------- Nav Button --------------------------- */}
       <div className="space-y-5">
         <div className="flex space-x-3 text-white">
           <Link
@@ -52,89 +58,84 @@ export default function May() {
             Riyadhah
           </Link>
         </div>
+
         <hr className="border-black border-2 w-1/2" />
-        <div className="grid grid-cols-3 gap-5">
-        <div className="">
-          <form action="">
-            <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
-              <p className="font-bold text-2xl">Shalat Subuh</p>
-              <div className="flex space-x-5">
-                <ButtonSubmit name={<AiOutlineCheck />} />
-                <ButtonSubmit
-                  name={<AiOutlineClose />}
-                  outline="red-500"
-                  text="red-500"
-                  bg="red-700"
-                />
+
+        {/* -------------------------------------- form ---------------------------------------------- */}
+        <form onSubmit={handleSubmit}>
+          <div className="grid grid-cols-3 gap-5">
+            <div className="">
+              <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
+                <p className="font-bold text-2xl">Shalat Subuh</p>
+                <div className="flex space-x-5">
+                  <ButtonSubmit name={<AiOutlineCheck />} />
+                  <ButtonSubmit
+                    name={<AiOutlineClose />}
+                    outline="red-500"
+                    text="red-500"
+                    bg="red-700"
+                  />
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div className="">
-          <form action="">
-            <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
-              <p className="font-bold text-2xl">Shalat Zuhur</p>
-              <div className="flex space-x-5">
-                <ButtonSubmit name={<AiOutlineCheck />} />
-                <ButtonSubmit
-                  name={<AiOutlineClose />}
-                  outline="red-500"
-                  text="red-500"
-                  bg="red-700"
-                />
+            <div className="">
+              <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
+                <p className="font-bold text-2xl">Shalat Zuhur</p>
+                <div className="flex space-x-5">
+                  <ButtonSubmit name={<AiOutlineCheck />} />
+                  <ButtonSubmit
+                    name={<AiOutlineClose />}
+                    outline="red-500"
+                    text="red-500"
+                    bg="red-700"
+                  />
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div className="">
-          <form action="">
-            <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
-              <p className="font-bold text-2xl">Shalat Ashar</p>
-              <div className="flex space-x-5">
-                <ButtonSubmit name={<AiOutlineCheck />} />
-                <ButtonSubmit
-                  name={<AiOutlineClose />}
-                  outline="red-500"
-                  text="red-500"
-                  bg="red-700"
-                />
+            <div className="">
+              <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
+                <p className="font-bold text-2xl">Shalat Ashar</p>
+                <div className="flex space-x-5">
+                  <ButtonSubmit name={<AiOutlineCheck />} />
+                  <ButtonSubmit
+                    name={<AiOutlineClose />}
+                    outline="red-500"
+                    text="red-500"
+                    bg="red-700"
+                  />
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div className="">
-          <form action="">
-            <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
-              <p className="font-bold text-2xl">Shalat Maghrib</p>
-              <div className="flex space-x-5">
-                <ButtonSubmit name={<AiOutlineCheck />} />
-                <ButtonSubmit
-                  name={<AiOutlineClose />}
-                  outline="red-500"
-                  text="red-500"
-                  bg="red-700"
-                />
+            <div className="">
+              <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
+                <p className="font-bold text-2xl">Shalat Maghrib</p>
+                <div className="flex space-x-5">
+                  <ButtonSubmit name={<AiOutlineCheck />} />
+                  <ButtonSubmit
+                    name={<AiOutlineClose />}
+                    outline={"red-500"}
+                    text={"red-500"}
+                    bg="red-700"
+                  />
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div className="">
-          <form action="">
-            <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
-              <p className="font-bold text-2xl">Shalat Isya</p>
-              <div className="flex space-x-5">
-                <ButtonSubmit name={<AiOutlineCheck />} />
-                <ButtonSubmit
-                  name={<AiOutlineClose />}
-                  outline="red-500"
-                  text="red-500"
-                  bg="red-700"
-                />
+            <div className="">
+              <div className="px-8 py-10 bg-white shadow-sm shadow-gray-500 rounded-xl flex flex-col space-y-5">
+                <p className="font-bold text-2xl">Shalat Isya</p>
+                <div className="flex space-x-5">
+                  <ButtonSubmit name={<AiOutlineCheck />} />
+                  <ButtonSubmit
+                    name={<AiOutlineClose />}
+                    outline={"red-500"}
+                    text={"red-500"}
+                    bg="red-700"
+                  />
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        </div>
+          </div>
+        </form>
       </div>
     </Layout>
   );

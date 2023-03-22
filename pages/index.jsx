@@ -81,7 +81,7 @@ export default function Home() {
                 </p>
               </blockquote>
               <Link
-                href="#"
+                href="/about"
                 className="py-3 px-5 border-2 justify-between border-blue-500 text-blue-500 hover:text-white hover:bg-blue-700 duration-200 rounded-full focus:ring-4 focus:ring-blue-300 flex items-center mr-auto"
               >
                 More About us <GiSupersonicArrow className="ml-3" />
@@ -123,7 +123,9 @@ export default function Home() {
         {/* ----------------------------------------- Pengurus Section ------------------------------------------ */}
 
         <div>
-          <h3 className="text-4xl font-bold text-center">Pengurus {new Date().getFullYear()}</h3>
+          <h3 className="text-4xl font-bold text-center">
+            Pengurus {new Date().getFullYear()}
+          </h3>
           <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
         </div>
 
@@ -150,6 +152,15 @@ export default function Home() {
             Memori Pengurus {new Date().getFullYear() - 1}
           </h3>
           <hr className="mt-7 mb-20 border-2 border-black rounded-xl w-1/12 m-auto" />
+          <div className="flex justify-center px-5">
+            <video
+              className="aspect-video border-slate-800/90 rounded-3xl"
+              controls
+            >
+              <source src="/video/Dokumenter_2022.mp4" type="video/mp4" />
+              Your browser does not support the video tag
+            </video>
+          </div>
         </div>
 
         {/* ---------------------------------------- Testimonial Section ---------------------------------------- */}
